@@ -3,18 +3,20 @@ body {
     background-color: #4C585B;
     color: #F4EDD3;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+    text-align: center;
 }
 
 h1 {
-    font-size: 750%;
+    font-size: 16vw;
     text-shadow: 0px 8px 8px #292e30;
-    margin-top: 44%;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 button {
-    font-size: 150%;
+    font-size: 6vw;
     font-weight: 600;
-    border-radius: 40px;
+    border-radius: 400px;
     color: #F4EDD3;
     border: none;
     background-color: #7E99A3;
@@ -28,8 +30,6 @@ button:hover {
 }
 
 button:active {
-    font-size: 140%;
-    border-radius: 60px;
     box-shadow: inset 0px 4px 4px #292e30; 
 }
 /* ------------------------------------------------------------------------------------------------ */
@@ -37,26 +37,22 @@ button:active {
 /* Start Menu */
 #starting-container {
     display: inline-block;
-    margin-left: 40%;
-    text-align: center;
 }
 
 #help {
     border-radius: 100%;
     padding: 2%;
-    width: 13%;
+    width: 9vw;
 }
 
 #help:active {
-    font-size: 134%;
     box-shadow: inset 0px 4px 4px #292e30;
-    width: 42px;
 }
 
 #help-div {
     display: none;
     position: absolute;
-    width: 10%;
+    width: 40vw;
     color: black;
     background-color: #F4EDD3;
     font-weight: 500;
@@ -74,9 +70,9 @@ button:active {
 
 /* Icons */
 .icons {
-    width: 70px;
+    width: 16vw;
+    max-width: 100px;
     display: flex;
-    margin-bottom: 40%;
     border: none;
 }
 
@@ -86,16 +82,15 @@ button:active {
     border-radius: 20px;
     box-shadow: 0px 6px 8px 4px #292e30;
 }
+
 .icons:active {
     background-color: #A5BFCC;
     box-shadow: inset 0px 4px 4px #292e30;
-    width: 68px;
 }
 
 #icon-div {
     position: fixed;
-    width: 3%;
-    top: 62%;
+    top: 88vh;
 }
 /* ------------------------------------------------------------------------------------------------ */
 
@@ -207,8 +202,6 @@ button:active {
 /* Game Over Menu */
 #game-over-container {
     display: none;
-    margin-left: 34%;
-    text-align: center;
 }
 
 #try-again-button {
@@ -221,4 +214,47 @@ button:active {
 .flash {
     background-color: rgb(255, 255, 255);
     transition: background-color 0.3s ease; /* Smooth transition to create a flash effect */
+}
+/* ------------------------------------------------------------------------------------------------ */
+
+/* Screen Optimization */
+@media screen and (min-width: 1200px) {
+    h1 {
+        font-size: 150px;
+        margin-bottom: -250px;
+    }
+
+    button {
+        font-size: 50px;
+    }
+
+    #help {
+        width: 80px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    h1 {
+        margin-top: 30vw;
+    }
+    
+    .panel {
+        width: 23vw;
+        height: 23vw;
+        border: 4px solid black;
+    }
+
+    .center {
+        width: 22vw;
+        height: 22vw;
+    }
+
+    .game-container {
+        width: 48vw;
+        height: 48vw;
+    }
+
+    #level-number {
+        font-size: 10vw;
+    }
 }
